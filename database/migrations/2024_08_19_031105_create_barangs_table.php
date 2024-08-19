@@ -15,8 +15,14 @@ return new class extends Migration
             $table->id();
             $table->string('nama_barang');
             $table->foreignId('kategori_id')->constrained('kategori');
+            $table->foreignId('supplier_id')->constrained('supplier');
             $table->string('kode_barang')->unique();
             $table->string('lokasi_barang');
+            $table->integer('stok');
+            $table->integer('harga_beli');
+            $table->integer('harga_jual');
+            $table->text('deskripsi');
+            $table->string('gambar');
             $table->timestamps();
         });
     }
