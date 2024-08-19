@@ -8,32 +8,25 @@ Sistem Gudang adalah aplikasi berbasis web yang dirancang untuk mengelola dan me
   - [Daftar Isi](#daftar-isi)
   - [Persyaratan Sistem](#persyaratan-sistem)
   - [Instalasi](#instalasi)
-    - [Backend](#backend)
-    - [Frontend](#frontend)
   - [Penggunaan](#penggunaan)
-  - [Daftar Username-Password](#daftar-username-password)
-  - [Framework](#framework)
-    - [Backend (Laravel)](#backend-laravel)
-    - [Frontend (Angular)](#frontend-angular)
+  - [Daftar Username dan Password](#daftar-username-password)
+  - [Teknologi](#teknologi)
   - [Author](#author)
 
 ## Persyaratan Sistem
 
-- PHP 7.0 - 8.0.
+- PHP 8.1 - 8.3.
 - MySQL atau database relasional lainnya (XAMPP/LAMPP).
 - Web server (contoh: Apache).
 - Browser web modern (Chrome/Firefox).
 - Composer
-- NodeJS versi  >= 16
-- Angular CLI versi >= 16
 
 ## Instalasi
 
 Membuka terminal lalu
 Clone repositori ini ke dalam direktori komputer anda
 
-### Backend
-- `cd backend`
+- `cd Sistem_Gudang`
 - `composer install atau composer update` 
 - `cp .env.example .env`
 - `php artisan key:generate`
