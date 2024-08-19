@@ -39,7 +39,7 @@ Clone repositori ini ke dalam direktori komputer anda
 ## Penggunaan
 
 1. Buka Postman
-2. Masuk Menu Collection dan import file Collection berikut : <a href="./Dokumentasi/SistemGudang.postman_collection.json"></a>
+2. Masuk Menu Collection dan import file Collection berikut : <a href="./Dokumentasi/SistemGudang.postman_collection.json">SistemGudang.postman_collection.json</a>
 
 ## Daftar Username-Password
 
