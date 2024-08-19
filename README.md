@@ -37,9 +37,8 @@ Clone repositori ini ke dalam direktori komputer anda
 
 ## Penggunaan
 
-1. Akses aplikasi melalui browser dengan [http://localhost:4200](http://localhost:4200)
-2. Login menggunakan akun admin atau pihak yang menyetujui.
-3. Gunakan menu untuk melakukan pemesanan, persetujuan, dan melihat laporan.
+1. Buka Postman
+2. Masuk Menu Collection dan import file Collection berikut : 
 
 ## Daftar Username-Password
 
