@@ -1,0 +1,866 @@
+{
+	"info": {
+		"_postman_id": "0f355f52-a43a-41f6-90dd-889e3d0ac49c",
+		"name": "SistemGudang",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23730561"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@mail.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kategori",
+			"item": [
+				{
+					"name": "List Kategori",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/kategori",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"kategori"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Kategori",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama_kategori\" : \"tes\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/kategori",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"kategori"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Kategori",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/kategori/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"kategori",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Kategori",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama_kategori\" : \"tes1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/kategori/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"kategori",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Kategori",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/kategori/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"kategori",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "List Supplier",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/supplier",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"supplier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Supplier",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama_supplier\" : \"tes\",\n    \"alamat_supplier\" : \"tes\",\n    \"kontak_supplier\" : \"0000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/supplier",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"supplier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Supplier",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/supplier/11",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"supplier",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Kategori",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama_supplier\" : \"tes1\",\n    \"alamat_supplier\" : \"tes1\",\n    \"kontak_supplier\" : \"1111\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/supplier/11",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"supplier",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Supplier",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/supplier/11",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"supplier",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Barang",
+			"item": [
+				{
+					"name": "List Barang",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/barang",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"barang"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Barang",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama_barang",
+									"value": "tes",
+									"type": "text"
+								},
+								{
+									"key": "kategori_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "supplier_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "kode_barang",
+									"value": "tes-123",
+									"type": "text"
+								},
+								{
+									"key": "lokasi_barang",
+									"value": "Ruang 1",
+									"type": "text"
+								},
+								{
+									"key": "stok",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "harga_beli",
+									"value": "5000",
+									"type": "text"
+								},
+								{
+									"key": "harga_jual",
+									"value": "7000",
+									"type": "text"
+								},
+								{
+									"key": "deskripsi",
+									"value": "testes",
+									"type": "text"
+								},
+								{
+									"key": "gambar",
+									"type": "file",
+									"src": "/home/firgi/Downloads/1.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/barang",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"barang"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Barang",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/barang/10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"barang",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Barang",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama_barang",
+									"value": "tes1",
+									"type": "text"
+								},
+								{
+									"key": "kategori_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "supplier_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "kode_barang",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "lokasi_barang",
+									"value": "Ruang 3",
+									"type": "text"
+								},
+								{
+									"key": "stok",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "harga_beli",
+									"value": "5000",
+									"type": "text"
+								},
+								{
+									"key": "harga_jual",
+									"value": "10000",
+									"type": "text"
+								},
+								{
+									"key": "deskripsi",
+									"value": "deskripsi",
+									"type": "text"
+								},
+								{
+									"key": "gambar",
+									"type": "file",
+									"src": "/home/firgi/Downloads/2.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/barang/10?_method=PUT",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"barang",
+								"10"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "PUT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Barang",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/barang/10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"barang",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mutasi",
+			"item": [
+				{
+					"name": "List Mutasi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/mutasi",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mutasi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Mutasi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\" : 2,\n    \"barang_id\" : 1,\n    \"tanggal_mutasi\" : \"2024-08-20\",\n    \"jenis_mutasi\" : \"masuk\",\n    \"jumlah_mutasi\" : 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/mutasi",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mutasi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Mutasi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/mutasi/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mutasi",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Mutasi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\" : 2,\n    \"barang_id\" : 1,\n    \"tanggal_mutasi\" : \"2024-08-22\",\n    \"jenis_mutasi\" : \"keluar\",\n    \"jumlah_mutasi\" : 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/mutasi/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mutasi",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Mutasi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/mutasi/8",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mutasi",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "History Mutasi User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/history-mutasi-user/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"history-mutasi-user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "History Mutasi Barang",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/history-mutasi-barang/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"history-mutasi-barang",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
