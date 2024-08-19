@@ -31,18 +31,9 @@ Clone repositori ini ke dalam direktori komputer anda
 - `cp .env.example .env`
 - `php artisan key:generate`
 - silahkan membuat database dengan contoh
-  <img src="./doc/create_db.png">
+  <img src="./Dokumentasi/create_db.png">
 - `php artisan migrate --seed`
 - `php artisan serve`
-
-### Frontend
-- buka dengan beda terminal (cmd/powershell)
-- `cd frontend`
-- `npm install -g @angular/cli`
-- setelah install angular cli coba cek dengan
-  `ng version`
-- `npm install`
-- `ng serve --open`
 
 ## Penggunaan
 
