@@ -1,66 +1,92 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Sistem Gudang
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Sistem Gudang adalah aplikasi berbasis web yang dirancang untuk mengelola dan mengontrol stok barang di sebuah gudang. Aplikasi ini dirancang dengan menggunakan Laravel untuk backend dan Docker untuk manajemen dan deployment kontainer.
 
-## About Laravel
+## Daftar Isi
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- [Sistem Gudang](#sistem-gudang)
+  - [Daftar Isi](#daftar-isi)
+  - [Persyaratan Sistem](#persyaratan-sistem)
+  - [Instalasi](#instalasi)
+    - [Backend](#backend)
+    - [Frontend](#frontend)
+  - [Penggunaan](#penggunaan)
+  - [Daftar Username-Password](#daftar-username-password)
+  - [Framework](#framework)
+    - [Backend (Laravel)](#backend-laravel)
+    - [Frontend (Angular)](#frontend-angular)
+  - [Author](#author)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Persyaratan Sistem
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- PHP 7.0 - 8.0.
+- MySQL atau database relasional lainnya (XAMPP/LAMPP).
+- Web server (contoh: Apache).
+- Browser web modern (Chrome/Firefox).
+- Composer
+- NodeJS versi  >= 16
+- Angular CLI versi >= 16
 
-## Learning Laravel
+## Instalasi
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Membuka terminal lalu
+Clone repositori ini ke dalam direktori komputer anda
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Backend
+- `cd backend`
+- `composer install atau composer update` 
+- `cp .env.example .env`
+- `php artisan key:generate`
+- silahkan membuat database dengan contoh
+  <img src="./doc/create_db.png">
+- `php artisan migrate --seed`
+- `php artisan serve`
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Frontend
+- buka dengan beda terminal (cmd/powershell)
+- `cd frontend`
+- `npm install -g @angular/cli`
+- setelah install angular cli coba cek dengan
+  `ng version`
+- `npm install`
+- `ng serve --open`
 
-## Laravel Sponsors
+## Penggunaan
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+1. Akses aplikasi melalui browser dengan [http://localhost:4200](http://localhost:4200)
+2. Login menggunakan akun admin atau pihak yang menyetujui.
+3. Gunakan menu untuk melakukan pemesanan, persetujuan, dan melihat laporan.
 
-### Premium Partners
+## Daftar Username-Password
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+| Email             | Password    | Role      |
+| ----------------- | ----------- | --------- |
+| admin@gmail.com   | password    | Admin     |
+| leader@gmail.com  | password    | Leader    |
+| spv@gmail.com     | password    | SPV       |
+| dhead@gmail.com   | password    | Dept Head |
 
-## Contributing
+## Framework
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Aplikasi ini menggunakan kombinasi Laravel sebagai backend dan Angular sebagai frontend untuk memastikan kehandalan, keamanan, dan antarmuka pengguna yang responsif.
 
-## Code of Conduct
+### Backend (Laravel)
+- Framework: Laravel
+- Versi Laravel: 8.0
+- Dokumentasi Laravel: https://laravel.com/docs/8.x
+### Frontend (Angular)
+- Framework: Angular
+- Versi Angular: 16
+- Dokumentasi Angular: https://angular.io/docs
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+pastikan sudah menjalankan backend
+- Api Postman dapat dilihat pada folder /doc/postman/*
+- User Case Diagram <br/>
+  <img src="./doc/use_case_diagram.png">
+- Struktur Data Konsep <br/>
+  <img src="./doc/schema_db.png">
+  
 
-## Security Vulnerabilities
+## Author
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Firgi Sotya Izzuddin | 2024
