@@ -8,7 +8,6 @@ Sistem Gudang adalah aplikasi berbasis web yang dirancang untuk mengelola dan me
   - [Daftar Isi](#daftar-isi)
   - [Persyaratan Sistem](#persyaratan-sistem)
   - [Instalasi](#instalasi)
-  - [Penggunaan](#penggunaan)
   - [Daftar Username dan Password](#daftar-username-password)
   - [Teknologi](#teknologi)
   - [Author](#author)
@@ -36,35 +35,23 @@ Clone repositori ini ke dalam direktori komputer anda
 - `php artisan migrate --seed`
 - `php artisan serve`
 
-## Penggunaan
-
-1. Buka Postman
-2. Masuk Menu Collection dan import file Collection berikut : [SistemGudang.postman_collection.json](https://github.com/Firgisotya/Sistem_Gudang/blob/ea5851705965976bbc0bb33d09bda854577db542/Dokumentasi/SistemGudang.postman_collection.json) 
-
 ## Daftar Username-Password
 
-| Email             | Password    | Role      |
-| ----------------- | ----------- | --------- |
-| admin@gmail.com   | password    | Admin     |
-| leader@gmail.com  | password    | Leader    |
-| spv@gmail.com     | password    | SPV       |
-| dhead@gmail.com   | password    | Dept Head |
+| Email             | Password    |
+| ----------------- | ----------- |
+| admin@mail.com    | password    | 
+| firgi@mail.com    | password    |
 
-## Framework
-
-Aplikasi ini menggunakan kombinasi Laravel sebagai backend dan Angular sebagai frontend untuk memastikan kehandalan, keamanan, dan antarmuka pengguna yang responsif.
-
-### Backend (Laravel)
+## Teknologi
 - Framework: Laravel
-- Versi Laravel: 8.0
-- Dokumentasi Laravel: https://laravel.com/docs/8.x
-### Frontend (Angular)
-- Framework: Angular
-- Versi Angular: 16
-- Dokumentasi Angular: https://angular.io/docs
+- Versi Laravel: 10.0
+- Dokumentasi Laravel: https://laravel.com/docs/10.x
+- Database: MySQL
+- Autentikasi: Laravel Sanctum atau Passport untuk manajemen token
+- Containerization: Docker untuk build, deployment, dan pengelolaan lingkungan aplikasi
 
 pastikan sudah menjalankan backend
-- Api Postman dapat dilihat pada folder /doc/postman/*
+- Api Postman dapat dilihat pada link berikut : <a href="https://documenter.getpostman.com/view/23730561/2sA3sAfmwE">Sistem Gudang Api Dokumentasi</a>
 - User Case Diagram <br/>
   <img src="./doc/use_case_diagram.png">
 - Struktur Data Konsep <br/>
