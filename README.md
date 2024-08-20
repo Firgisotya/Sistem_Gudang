@@ -16,8 +16,7 @@ Sistem Gudang adalah aplikasi berbasis web yang dirancang untuk mengelola dan me
 
 - PHP 8.1 - 8.3.
 - MySQL atau database relasional lainnya (XAMPP/LAMPP).
-- Web server (contoh: Apache).
-- Browser web modern (Chrome/Firefox).
+- Postman
 - Composer
 
 ## Instalasi
@@ -52,10 +51,8 @@ Clone repositori ini ke dalam direktori komputer anda
 
 pastikan sudah menjalankan backend
 - Api Postman dapat dilihat pada link berikut : <a href="https://documenter.getpostman.com/view/23730561/2sA3sAfmwE">Sistem Gudang Api Dokumentasi</a>
-- User Case Diagram <br/>
-  <img src="./doc/use_case_diagram.png">
 - Struktur Data Konsep <br/>
-  <img src="./doc/schema_db.png">
+  <img src="./Dokumentasi/schema_db.png">
   
 
 ## Author
