@@ -29,8 +29,9 @@ Clone repositori ini ke dalam direktori komputer anda
 - `cp .env.example .env`
 - `php artisan key:generate`
 - silahkan membuat database dengan contoh : 
-<br>
+  <br>
   <img src="./Dokumentasi/create_db.png">
+  <br>
 - `php artisan migrate --seed`
 - `php artisan serve`
 
