@@ -10,6 +10,7 @@ Sistem Gudang adalah aplikasi berbasis web yang dirancang untuk mengelola dan me
   - [Instalasi](#instalasi)
   - [Daftar Username dan Password](#daftar-username-password)
   - [Teknologi](#teknologi)
+  - [Dokumentasi](#dokumentasi)
   - [Author](#author)
 
 ## Persyaratan Sistem
@@ -50,7 +51,7 @@ Clone repositori ini ke dalam direktori komputer anda
 - Autentikasi: Laravel Sanctum atau Passport untuk manajemen token
 - Containerization: Docker untuk build, deployment, dan pengelolaan lingkungan aplikasi
 
-pastikan sudah menjalankan backend
+## Dokumentasi
 - Api Postman dapat dilihat pada link berikut : <a href="https://documenter.getpostman.com/view/23730561/2sA3sAfmwE">Sistem Gudang Api Dokumentasi</a>
 - Struktur Data Konsep <br/>
   <img src="./Dokumentasi/schema_db.png">
